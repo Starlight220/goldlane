@@ -8,7 +8,7 @@
 See `src/main/kotlin/com/example/api/plugins/Routing.kt`
 
 #### 6
-In cases of unexpected requests, the system should repond with an error.
+In cases of unexpected requests, the server should send an error response. Clients should handle that case and not crash. 
 
 #### 7
 Encrypting the data and using secure network connections and protocols (HTTPS, etc.) should improve data security.

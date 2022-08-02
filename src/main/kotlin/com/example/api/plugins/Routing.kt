@@ -17,11 +17,13 @@ fun Application.configureRouting() {
  * Define the HTTP API for the calculator.
  */
 fun Route.calculatorRequest() {
-    get("/") {
+    post("/calculator") {
         // receive parameters
         val inputs = call.receive<Inputs>()
         // calculate
         val outputs = inputs.calculate()
+
+        System.err.println("Received Request!")
         // send response
         call.respond(outputs)
     }
