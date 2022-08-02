@@ -1,5 +1,6 @@
 package com.example.calculator
 
+import kotlinx.serialization.Serializable
 import kotlin.math.*
 
 /**
@@ -7,6 +8,7 @@ import kotlin.math.*
  * @property theta0 Angle of launch (above horizontal, in radians).
  * @property h0 Projectile's initial height (in m).
  */
+@Serializable
 data class Inputs(val v0: Double, val theta0: Double, val h0: Double)
 
 /**
@@ -14,6 +16,7 @@ data class Inputs(val v0: Double, val theta0: Double, val h0: Double)
  * @property v Velocity at impact (in m/s).
  * @property theta Angle at impact (in radians).
  */
+@Serializable
 data class Outputs(val x: Double, val v: Double, val theta: Double)
 
 /**
